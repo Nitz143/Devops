@@ -1,0 +1,393 @@
+    1  sudo apt-get update
+    2  yum apt-get update
+    3  yum apt-get 
+    4  yum apt-get  --help
+    5  sudo apt-get update
+    6  sudo yum update -y
+    7  sudo yum install docker -y
+    8   sudo service docker start
+    9   sudo service docker status
+   10  docker ps -a
+   11  sudo chmod 666 /var/run/docker.sock
+   12  docke ps 
+   13  docker ps
+   14  docker -version
+   15  history
+   16  docker ps -a
+   17  pwd
+   18  mkdir sql_vol
+   19  cd sql_vol/
+   20  ls 
+   21  pwd
+   22  docker run -it -v /home/ec2-user/sql_vol:/var/lib/mysql -p 3306:3306 --name mysql_container -e MYSQL_ROOT_PASSWORD=dockerpwd -e MYSQL_DATABASE=dockervolumedemo 
+   23  docker run -it -v /home/ec2-user/sql_vol:/var/lib/mysql -p 3306:3306 --name mysql_container -e MYSQL_ROOT_PASSWORD=Password01+ -e MYSQL_DATABASE=dockervolume -e MYSQL_USER=docker mysql
+   24  docker ps -a
+   25  docker execd -it 01 bash
+   26  docke ps -a
+   27  docker ps -a
+   28  docker exec -it 01 bash
+   29  ls
+   30  ll -lrt
+   31  pwd
+   32  docker run -d --name new_sql_container -v /home/ec2-user/sql_vol:/var/lib/mysql -p 3306:3306 mysql
+   33  docker run -d --name new_sql_container -v /home/ec2-user/sql_vol:/var/lib/mysql -p 3307:3306 mysql
+   34  docker ps -a
+   35  docker stop 01
+   36  docker rm 1d64c84f5635
+   37  docker run -d --name new_sql_container -v /home/ec2-user/sql_vol:/var/lib/mysql -p 3307:3306 mysql
+   38  docker ps -a
+   39  docker exec -it 9e bash
+   40  sudo systemctl docker start
+   41  sudo service docker start
+   42  sudo service docker status
+   43  docker ps 
+   44  chmod 666  /var/run/docker.sock
+   45  sudo chmod 666  /var/run/docker.sock
+   46  docker ps -a
+   47  docker network create  monitoring-network
+   48  docker netwrok
+   49  docker netwrok --help
+   50  docker ls
+   51  docker network ls
+   52  docker run -d --name node-exporter-node1 -p 9100:9100 --network monitoring-network bitnami/node-exporter:latest
+   53  docker run -d --name node-exporter-node -p 9100:9100 --network monitoring-network bitnami/node-exporter:latest
+   54  docker ps -a
+   55  docker run -d --network monitoring-network --name prometheus -p 9090:9090 bitnami/prometheus:latest
+   56  hostname -i
+   57  ip config
+   58  ifconfig
+   59  curl 172.18.0.1:9100
+   60  curl 13.126.76.199:9100
+   61  docker ps -a
+   62  docker exec -it prometheus bash
+   63  docker ps -a
+   64  docker cp prometheus:/opt/bitnami/prometheus/conf/prometheus.yml .
+   65  ls
+   66  vi prometheus.yml 
+   67  cat prometheus.yml 
+   68  docker cp prometheus.yml prometheus:/opt/bitnami/prometheus/conf/prometheus.yml 
+   69  docker exec -it prometheus bash
+   70  ls
+   71  docker restart prometheus
+   72  docker ps -a
+   73  docker run -d  --network monitoring-network --name=grafana -p 3000:3000 grafana/grafana
+   74  docker pa -a
+   75  docker ps -a
+   76  ping 13.126.76.199
+   77  ping 13.126.76.199:9100
+   78  ping 13.126.76.199:3000
+   79  ping 13.126.76.199
+   80  ping 13.126.76.199:9100
+   81  docker ps -a
+   82  docker stop grafana prometheus node-exporter-node
+   83  docker ps -a
+   84  sudp yum apt-get install httpd
+   85  sudo yum apt-get install httpd
+   86   yum apt-get install httpd
+   87  sudo yum -y install httpd
+   88  sudo service httpd start
+   89  sudo service httpd status
+   90  sudo service httpd stop
+   91  docker ps
+   92  sudo docker service start
+   93  sudo service docker start
+   94  sudo service docker status
+   95  docke ps
+   96  docker ps
+   97  sudo chmod 666 /var/run/docker.sock
+   98  docker ps -a
+   99  \
+  100  docker start grafana prometheus node-exporter-node
+  101  docker ps -a
+  102  sudo systemctl start grafana-server
+  103  docker volume ls
+  104  ss -tln
+  105  history
+  106  docker ps -a
+  107  curl ec2-13-235-94-89.ap-south-1.compute.amazonaws.com:9090
+  108  curl ec2-13-235-94-89.ap-south-1.compute.amazonaws.com:9100
+  109  curl ec2-13-235-94-89.ap-south-1.compute.amazonaws.com:3000
+  110  ss -tln
+  111  docker ps -a
+  112  dcker exe -it 016 bash
+  113  docker exe -it 016 bash
+  114  docker exec -it 016 bash
+  115  ls
+  116  docr ps -a
+  117  docker ps -a
+  118  ss -tln
+  119  docker ps -a
+  120  docker start mysql_container new_sql_container
+  121  docker exec -it mysql_container bash
+  122  docker ps -a
+  123  docke ps -a
+  124  docker ps -a
+  125  docker ps
+  126  docker network ls
+  127  docker stop grafana 
+  128  top -i
+  129  df -u
+  130  df
+  131  df -tfh
+  132  df -h
+  133  docker ps 
+  134  docke ps -a
+  135  docker ps -a
+  136  docker start new_sql_container
+  137  docke ps -a
+  138  docker ps -a
+  139  docker start new_sql_container
+  140  docker ps -a
+  141  docker attach new_sql_container
+  142  docker ps -a
+  143  docker attach mysql_container
+  144  docker ps -a
+  145  docker exec -it mysql_container bash
+  146  docker ps -a
+  147  docker stop grafana prometheus node-exporter-node mysql_container
+  148  docker-compose version
+  149  vi docker-compose.yml
+  150  docker network create todo-app
+  151  docker network ls
+  152  ls
+  153  docker-compose up -d
+  154  docker-compos.ymle up -d
+  155  docker-compos.yml up -d
+  156  cat docker-compose.yml 
+  157  docker ps -a
+  158  ls
+  159  sudo service start docker
+  160  sudo docker service start
+  161  sudo service docker start
+  162  sudo service docker status
+  163  docker ps -a
+  164  sudo chmod 666  /var/run/docker.sock
+  165  docker ps -a
+  166  history
+  167  docker ps
+  168  docker images
+  169  ls
+  170  pwd
+  171  sudo service docker status
+  172  sudo service jenkins status
+  173  service jenkins status
+  174  sudo jenkins status
+  175  history
+  176  docker images
+  177  history
+  178  docker
+  179  docker --version
+  180  mkdir jenkins
+  181  ls
+  182  pwd
+  183  mv jenkins/ jenkins-data
+  184  pwd
+  185  /home/ec2-user/jenkins-data
+  186  ls
+  187  jenkins-data/
+  188  sudo ufw allow 8080
+  189  sudo apt get update
+  190  docker ps
+  191  docker ps
+  192  history
+  193  sudo service start docker
+  194  sudo service docker start
+  195  sudo chmod 666  /var/run/docker.sock
+  196  docker ps -a
+  197  docker images
+  198  mkdir volumeJenkins
+  199  pwd
+  200  docker run -it  -v /home/ec2-user/volumeJenkins:/var/jenkins_home -p 8000:8080 --name cont1 jenkins/jenkins 
+  201  sudo apt update
+  202  ls
+  203  docker images
+  204  history
+  205  ls
+  206  pwd
+  207  docker images
+  208  sudo chmod 666 /var/run/docker.sock
+  209  sudo chmod 666 /var/run/docker.sock.
+  210  sudo service docker start
+  211  sudo chmod 666 /var/run/docker.sock.
+  212  docker ps
+  213  sudo chmod 666 /var/run/docker.sock
+  214  docker ps -a
+  215  docker start cont1
+  216  kubectl exec -it cont1 sh
+  217  kubectl exec -it cont1 ssh
+  218  kubectl exec -it cont1 bash
+  219  kubectl exec -it cont1 /bin/bash
+  220  docker exec -it cont1 ssh
+  221  docker exec -it cont1 sh
+  222  docker ps -a
+  223  docker ps 
+  224  sudo cat /var/jenkins_home/secrets/initialAdminPassword
+  225  cat /var/jenkins_home/secrets/initialAdminPassword
+  226  ls
+  227  docker exec -it cont1 sh
+  228  docker exec -it cont1 bash
+  229  ls
+  230  docker images
+  231  sudo -i
+  232  docker images
+  233  pwd
+  234  ls
+  235  docker volume create jenkins_vol
+  236  docker volume ls
+  237  pwd
+  238  ls
+  239  docker volume --help
+  240  docker inspect jenkins_vol
+  241  cd /var/run/docker.sock
+  242  cd ~
+  243  ls
+  244  cd ./
+  245  ls
+  246  cd 
+  247  ls
+  248  cd .
+  249  ls
+  250  cd /
+  251  ls
+  252  cd /var/lib/docker/volumes/jenkins_vol/_data
+  253  ls
+  254  cd /var/lib/docker/volumes/jenkins_vol/
+  255  sudo /var/lib/docker/volumes/jenkins_vol/
+  256  sudo chmod 777 /var/lib/docker/volumes/jenkins_vol/
+  257  cd /var/lib/docker/volumes/jenkins_vol/
+  258  sudo cd /var/lib/docker/volumes/jenkins_vol/
+  259  ls
+  260  cd chmod 777 var
+  261  chmod 777 /var
+  262  sudo chmod 777 /var/lib
+  263  ls
+  264  cd var/
+  265  ls
+  266  cd lib/
+  267  ls
+  268  cd docker/
+  269  exit
+  270  ls
+  271  mkdir jenkins_vol
+  272  ls
+  273  pwd
+  274  docker run --it -d -v /home/ec2-user/jenkins_vol:/var/jenkins_home -p 8090:8080 jenkins/jenkins
+  275  docker run -it -d -v /home/ec2-user/jenkins_vol:/var/jenkins_home -p 8090:8080 jenkins/jenkins
+  276  docker ps -a
+  277  docker inspect 
+  278  docker inspect silly_allen
+  279  ls
+  280  docker ps -a
+  281  docker exec -it silly_allen bash
+  282  docker ps
+  283  history
+  284  sudo service docker start
+  285  docker ps
+  286  sudo chmod 666 /var/run/docker.sock
+  287  docker ps
+  288  docker images
+  289  pwd
+  290  mkdir Voljenkins
+  291  pwd
+  292  docker run -it -d -v /home/ec2-user/Voljenkins:/var/jenkins_home -p 8088:8080 jenkins/jenkins
+  293  docker ps -a
+  294  0c2c49dd988c61f06917d21a6f12f9e32aede97787d2a29eebc20ecedca769da
+  295   0c2c49dd988c61f06917d21a6f12f9e32aede97787d2a29eebc20ecedca769da:
+  296  ls
+  297  cd Voljenkins
+  298  cd ..
+  299  ls -ltr
+  300  sudo cat jenkins_home/secrets/initialAdminPassword
+  301  exit
+  302  docker ps
+  303  ls
+  304  docker exec -it oc2
+  305  docker exec -it infallible_b
+  306  docker exec -it infallible_b bash
+  307  docker ps
+  308  docker exec -it infallible_bassi bash
+  309  docker images
+  310  ls
+  311  sudo service docker start
+  312  docker ps -a
+  313  sudo chmod 666 /var/run/docker.sock 
+  314  docker ps -a
+  315  docker start infallible_bassi
+  316  docker ps
+  317  docker start silly_allen
+  318  docker ps
+  319  docker ps -a
+  320  docker rm 
+  321  docker rm cont1
+  322  docker ps -a
+  323  docker stop infallible_bassi
+  324  uptime
+  325  uptime -p
+  326  [docker ps -a
+  327  docker ps -a
+  328  docker start 0c
+  329  docker ps
+  330  ls
+  331  cd jenkins
+  332  cd jenkins_vol/
+  333  ls
+  334  ll -lrt
+  335  cd war/
+  336  ls
+  337  cd executable/
+  338  ls
+  339  cd ..
+  340  ls
+  341  cd ..
+  342  ld
+  343  ls
+  344  cd workspace/
+  345  ls
+  346  cd test111/
+  347  ls
+  348  cat file
+  349  cat hello.py 
+  350  python
+  351  python3 hello.py 
+  352  ls
+  353  cat sample.py 
+  354  ls
+  355  git version
+  356  git --version
+  357  apt get install git
+  358  sudo apt install git
+  359  sudo apt-get install git
+  360  sudo yum update -y
+  361  sudo yum install git -y
+  362  cd ../.././
+  363  cd ../
+  364  ls
+  365  mkdir DevOps
+  366  cd DevOps/
+  367  ls
+  368  git init
+  369  git config --global --help
+  370  git config --global user.name="Nitish"
+  371  git config --global user.name=Nitish
+  372  git config --global user.name "Nitish"
+  373  git config --global user.email "Nitishy.08@gmail.com"
+  374  git init
+  375  cd ..
+  376  ls
+  377  rm DevOps/
+  378  rm DevOps
+  379  rm -d DevOps
+  380  rm -rd DevOps
+  381  ls
+  382  git init
+  383  git config --global user.name "Nitish"
+  384  git config --global user.email "Nitishy.08@gmail.com"
+  385  git in
+  386  int
+  387  git init
+  388  git clone https://github.com/Nitz143/Devops.git
+  389  ls
+  390  cd Devops/
+  391  ls
+  392  cat history > history.txt
+  393  history > history.txt
