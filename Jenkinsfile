@@ -11,8 +11,8 @@ pipeline {
         stage('Test') {
             steps {
               echo  'Test Code'
-              //   sh 'docker --version'
-              //   sh 'git --version'
+             
+               sh 'git --version'
             }
         }
         
