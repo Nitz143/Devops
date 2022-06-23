@@ -391,3 +391,30 @@
   391  ls
   392  cat history > history.txt
   393  history > history.txt
+  394  cat history.txt 
+  395  ls
+  396  git add .
+  397  git status
+  398  git commit -m "history"
+  399  git status
+  400  git remote add origin https://github.com/Nitz143/Devops.git
+  401  git push remote https://github.com/Nitz143/Devops.git
+  402  git push
+  403  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
+  404  git push
+  405  git branch
+  406  git merge master
+  407  git merge origin/master
+  408  git branch
+  409  ls
+  410  git status
+  411  git merge origin/master
+  412  git checkout master
+  413  ls
+  414  git merge main
+  415  ls
+  416  cat history.txt 
+  417  ls
+  418  history ? history.txt
+  419  history . history.txt
+  420  history > history.txt
