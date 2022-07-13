@@ -6,6 +6,12 @@ pipeline {
            }
 
     stages {
+        stage('Git Clone') {
+            steps {
+                git 'https://github.com/Nitz143/Devops.git'
+                sh 'ls'
+            }
+        
         stage('Build') {
             steps {
                 echo 'Build Code'
