@@ -10,6 +10,7 @@ pipeline {
             steps {
                 git 'https://github.com/Nitz143/Devops.git'
                 sh 'ls'
+		sh 'cat Jenkinsfile'
             }
 		}
         
