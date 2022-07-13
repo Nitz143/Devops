@@ -56,5 +56,7 @@ pipeline {
       emailext body: 'Summary of CI', subject: 'Pipeline Status', to: 'nitishy.08@gmail.com'
     }
   }
+ }
 
 }
+    
