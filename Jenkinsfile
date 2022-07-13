@@ -31,12 +31,12 @@ pipeline {
                def tech = "${params.Technology}"
                if(tech == "Python")
                  {
-                  echo "Welcome to Python programming Language
+                  echo "Welcome to Python programming Language"
                  } 
                
                else
                  {
-                  echo "Welcome to Java programming Language
+                  echo "Welcome to Java programming Language"
                  } 
                } 
              }
