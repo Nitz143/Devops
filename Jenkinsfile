@@ -11,6 +11,7 @@ pipeline {
                 git 'https://github.com/Nitz143/Devops.git'
                 sh 'ls'
             }
+		}
         
         stage('Build') {
             steps {
